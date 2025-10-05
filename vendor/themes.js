@@ -335,4 +335,19 @@ const themeList = [
     }
 ];
 
-export const themes = { themeList, defaultTheme };   
+// Normalize themes to include explicit nav styles so UI (nav/header) can adapt per-theme.
+// If a theme already provides navBackground/navColor, keep them; otherwise default to
+// the theme's background/color.
+const normalizedThemeList = themeList.map(t => ({
+    ...t,
+    navBackground: t.navBackground || t.background,
+    navColor: t.navColor || t.color,
+}));
+
+const normalizedDefault = {
+    ...defaultTheme,
+    navBackground: defaultTheme.navBackground || defaultTheme.background,
+    navColor: defaultTheme.navColor || defaultTheme.color,
+};
+
+export const themes = { themeList: normalizedThemeList, defaultTheme: normalizedDefault };

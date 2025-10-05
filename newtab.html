@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,75 +11,47 @@
   <canvas id="stars" aria-hidden="true"></canvas>
 
   <div class="main" role="main">
-    <header class="header">
-      <div class="logo">
-        <h2 aria-label="Katahari Quotes">katahari quotes</h2>
-
-        <div
-          id="button-theme"
-          class="button-setting katahari-theme margin-left-1rem"
-          role="button"
-          tabindex="0"
-          aria-pressed="false"
-        >
-          default theme
+    <header class="header" role="banner" aria-label="Top bar">
+      <div class="header-inner">
+        <div class="logo" role="img" aria-label="Katahari Quotes">
+          <h1 class="brand">katahari</h1>
+          <span class="brand-sub">quotes</span>
         </div>
 
-        <div
-          id="button-language"
-          class="button-setting katahari-language"
-          role="button"
-          tabindex="0"
-          aria-pressed="false"
-          title="Switch language"
-        >
-          🇬🇧 EN
-        </div>
-      </div>
-
-      <div class="donation">
-        <div
-          id="button-donate"
-          class="button-donation"
-          role="button"
-          tabindex="0"
-          title="Buy me a coffee"
-        >
-          ☕ buy me coffee
-        </div>
-        <div
-          id="button-contact"
-          class="button-donation"
-          role="button"
-          tabindex="0"
-          title="Contact"
-        >
-          💬 contact
-        </div>
+        <nav class="controls" role="navigation" aria-label="Top controls">
+          <button id="button-language" class="btn btn-ghost" aria-pressed="false" aria-label="Switch language" title="Switch language">🇬🇧 EN</button>
+          <button id="button-themes" class="btn btn-ghost" aria-label="Open themes" title="Open themes">Themes</button>
+          <button id="button-theme" class="btn btn-ghost katahari-theme" aria-pressed="false" aria-label="Toggle light/dark" title="Toggle theme">Light</button>
+          <button id="button-donate" class="btn btn-primary" aria-label="Buy me a coffee" title="Buy me a coffee">☕ Donate</button>
+          <button id="button-contact" class="btn btn-ghost" aria-label="Contact" title="Contact">💬 Contact</button>
+        </nav>
       </div>
     </header>
 
-    <div
-      class="theme-content hidden"
-      id="theme-content"
-      aria-live="polite"
-      aria-atomic="true"
-    ></div>
+    <main class="content" id="content" role="main">
+      <article class="quote-card card" role="article" aria-live="polite" aria-atomic="true">
+        <blockquote>
+          <p id="blockquote" class="blockquote"></p>
+          <footer>
+            <cite id="cite"></cite>
+          </footer>
+        </blockquote>
 
-    <div class="content" id="content">
-      <blockquote>
-        <p
-          id="blockquote"
-          class="blockquote"
-          aria-live="polite"
-          aria-atomic="true"
-        ></p>
-        <footer>
-          <cite id="cite"></cite>
-        </footer>
-      </blockquote>
-    </div>
+        <div class="quote-actions" role="group" aria-label="Quote actions">
+          <button id="btn-prev" class="btn btn-ghost btn-previous" aria-label="Previous quote" title="Previous">←</button>
+          <button id="btn-random" class="btn btn-ghost" aria-label="Random quote" title="Random">🎲</button>
+          <button id="btn-next" class="btn btn-ghost btn-next" aria-label="Next quote" title="Next">→</button>
+
+          <div class="spacer" aria-hidden="true"></div>
+
+          <button id="btn-copy" class="btn btn-ghost" aria-label="Copy quote" title="Copy">📋</button>
+          <button id="btn-share" class="btn btn-ghost" aria-label="Share quote" title="Share">🔗</button>
+        </div>
+      </article>
+    </main>
   </div>
+
+  <!-- Theme logic moved to vendor/main.js to avoid duplicate handlers -->
 
   <script type="module" src="./vendor/main.js"></script>
   <script type="module" src="./vendor/chromeStorageHelper.js"></script>
