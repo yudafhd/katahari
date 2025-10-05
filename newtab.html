@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Katahari Quotes - The Horizon Words</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <div class="main" role="main">
+    <header class="header">
+      <div class="logo">
+        <h2 aria-label="Katahari Quotes">katahari quotes</h2>
+
+        <div
+          id="button-theme"
+          class="button-setting katahari-theme margin-left-1rem"
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+        >
+          default theme
+        </div>
+
+        <div
+          id="button-language"
+          class="button-setting katahari-language"
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          title="Switch language"
+        >
+          🇬🇧 EN
+        </div>
+      </div>
+
+      <div class="donation">
+        <div
+          id="button-donate"
+          class="button-donation"
+          role="button"
+          tabindex="0"
+          title="Buy me a coffee"
+        >
+          ☕ buy me coffee
+        </div>
+        <div
+          id="button-contact"
+          class="button-donation"
+          role="button"
+          tabindex="0"
+          title="Contact"
+        >
+          💬 contact
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="theme-content hidden"
+      id="theme-content"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <div class="content" id="content">
+      <blockquote>
+        <p
+          id="blockquote"
+          class="blockquote"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
+        <footer>
+          <cite id="cite"></cite>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <script type="module" src="./vendor/main.js"></script>
+  <script type="module" src="./vendor/chromeStorageHelper.js"></script>
+  <script type="module" src="./vendor/star.js"></script>
+</body>
+</html>

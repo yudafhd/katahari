@@ -1,0 +1,306 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-18pt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Theme tokens */
+:root {
+  --bg: #f8fafc;
+  --bg-elev: rgba(0, 0, 0, 0.04);
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #7c3aed;
+  --accent-2: #2563eb;
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+[data-theme="dark"] {
+  --bg: #0b1020;
+  --bg-elev: rgba(255, 255, 255, 0.06);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 50% -10%, rgba(124, 58, 237, 0.08), transparent 60%),
+              radial-gradient(800px 600px at 100% 0%, rgba(37, 99, 235, 0.06), transparent 60%),
+              var(--bg);
+  overflow: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+canvas#stars {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+}
+
+/* Header */
+.main .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.main .header .logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  opacity: 0.9;
+}
+
+.main .header .logo h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
+.main .header .donation {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  opacity: 0.95;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.margin-left-1rem {
+  margin-left: 1rem !important;
+}
+
+/* Buttons */
+.main .header .button-setting,
+.main .header .button-donation {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: linear-gradient(to bottom, color-mix(in oklab, var(--bg) 94%, transparent), color-mix(in oklab, var(--bg) 86%, transparent));
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-size: .85rem;
+  line-height: 1;
+  color: var(--text);
+  transition: transform .15s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  user-select: none;
+}
+
+.main .header .button-setting:hover,
+.main .header .button-donation:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--accent) 40%, var(--border));
+  box-shadow: 0 8px 24px color-mix(in oklab, var(--accent) 12%, transparent);
+}
+
+.main .header .button-setting:active,
+.main .header .button-donation:active {
+  transform: translateY(0);
+}
+
+.main .header .katahari-theme { margin-left: .2rem; }
+.main .header .katahari-language { margin-left: .2rem; }
+
+/* Layout: content */
+.main .content {
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main .theme-content {
+  margin: auto;
+  width: clamp(320px, 50vw, 800px);
+  height: clamp(260px, 60svh, 520px);
+  text-align: left;
+  overflow-y: auto;
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 1.25rem;
+}
+
+.main .theme-content div { display: flex; }
+
+/* Quote block */
+.main .content blockquote {
+  margin: 0 auto;
+  max-width: min(900px, 80vw);
+  border-left: 0;
+  text-align: left;
+  font-style: normal;
+  padding: 0.3rem 0;
+  position: relative;
+}
+
+.main .content blockquote::before {
+  content: "“";
+  position: absolute;
+  left: -0.6ch;
+  top: -0.8ch;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  color: color-mix(in oklab, var(--accent) 45%, var(--text) 55%);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.main .content blockquote .blockquote {
+  font-size: clamp(1.6rem, 4vw + 0.5rem, 3.2rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.main .content cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: clamp(0.95rem, 1vw + 0.6rem, 1.2rem);
+  color: var(--muted);
+  font-style: normal;
+}
+
+.main .content cite::before {
+  content: "— ";
+}
+
+/* Utility card and info blocks (kept, restyled) */
+.card {
+  background-color: color-mix(in oklab, var(--bg) 80%, transparent);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px 32px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+  align-items: center;
+}
+
+.info label {
+  font-weight: 600;
+  color: var(--muted);
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.info a {
+  color: var(--text);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.info a:hover {
+  text-decoration: underline;
+  color: color-mix(in oklab, var(--accent-2) 60%, var(--text));
+}
+
+#status-label {
+  margin-left: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main .header {
+    padding: 0.6rem 0.9rem;
+  }
+  .main .header .logo h2 {
+    font-size: .95rem;
+  }
+  .main .content blockquote {
+    max-width: 88vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .header .button-donation:nth-child(1),
+  .main .header .button-donation:nth-child(2) {
+    padding: 0.3rem 0.5rem;
+    font-size: .8rem;
+  }
+}
