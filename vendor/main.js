@@ -89,8 +89,15 @@ window.addEventListener("DOMContentLoaded", async () => {
   const language = katahariLanguage ? JSON.parse(katahariLanguage) : { code: "EN" };
   const blockquote = document.getElementById("blockquote");
   const cite = document.getElementById("cite");
-  const quotes = await quotesList();
-  console.log(quotes)
+  // Load selected sources from storage (if any) and request filtered quotes from quotesList
+  let storedSourcesRaw = await storage.get("katahari-sources");
+  let selectedSources = null;
+  try {
+    selectedSources = storedSourcesRaw ? JSON.parse(storedSourcesRaw) : null;
+  } catch (e) {
+    selectedSources = null;
+  }
+  let quotes = await quotesList(selectedSources);
   let currentIndex = Math.max(0, Math.floor(Math.random() * (quotes.length || 1)));
 
   const showQuote = (idx) => {
@@ -271,6 +278,97 @@ document.getElementById("button-themes")?.addEventListener("click", async () => 
 
       // optionally close picker or leave content as-is; user can refresh to restore main view
     });
+  });
+});
+
+/*
+  Sources picker (opens when #button-sources is clicked).
+  Allows selecting which quote categories to include (e.g. book only, book + anime-manga).
+  Persists selection in "katahari-sources" and requests filtered quotes from the loader.
+*/
+document.getElementById("button-sources")?.addEventListener("click", async () => {
+  const content = document.getElementById("content");
+  const available = [
+    { key: "general", label: "General" },
+    { key: "book", label: "Book" },
+    { key: "anime-manga", label: "Anime & Manga" },
+    { key: "game", label: "Game" },
+    { key: "movie", label: "Movie" },
+    { key: "spongebob", label: "Spongebob" },
+  ];
+
+  // load current selection (default: all)
+  let stored = await storage.get("katahari-sources");
+  let selected = null;
+  try {
+    selected = stored ? JSON.parse(stored) : available.map((a) => a.key);
+  } catch (e) {
+    selected = available.map((a) => a.key);
+  }
+
+  const inputs = available
+    .map(
+      (a) =>
+        `<label style="display:flex;align-items:center;gap:8px;margin:6px"><input type="checkbox" data-key="${a.key}" ${selected.includes(a.key) ? "checked" : ""}/> ${a.label}</label>`
+    )
+    .join("");
+
+  const html = `
+    <div style="padding:12px;max-width:560px;margin:0 auto">
+      <h3 style="margin:0 0 8px 0">Select Quote Sources</h3>
+      <div id="sources-list" style="display:flex;flex-wrap:wrap;gap:8px">${inputs}</div>
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+        <button id="sources-save" class="btn btn-primary">Save</button>
+        <button id="sources-all" class="btn btn-ghost">Select All</button>
+        <button id="sources-none" class="btn btn-ghost">Clear</button>
+        <button id="panel-close" class="btn btn-ghost">Close</button>
+      </div>
+    </div>
+  `;
+
+  showPanel(html);
+
+  // wire up actions inside panel
+  document.getElementById("sources-all")?.addEventListener("click", () => {
+    document.querySelectorAll("#sources-list input[type=checkbox]").forEach((cb) => {
+      cb.checked = true;
+    });
+  });
+
+  document.getElementById("sources-none")?.addEventListener("click", () => {
+    document.querySelectorAll("#sources-list input[type=checkbox]").forEach((cb) => {
+      cb.checked = false;
+    });
+  });
+
+  document.getElementById("sources-save")?.addEventListener("click", async () => {
+    const picked = Array.from(document.querySelectorAll("#sources-list input[type=checkbox]"))
+      .filter((cb) => cb.checked)
+      .map((cb) => cb.getAttribute("data-key"));
+
+    // persist selection
+    await storage.set("katahari-sources", JSON.stringify(picked));
+
+    // update runtime quotes and show first
+    try {
+      // update the quotes variable in the main scope by reloading from loader
+      // quotes is declared in DOMContentLoaded scope; attempt to update via global function
+      // if quotesList supports selection, request it directly and update UI
+      const newQuotes = await quotesList(picked);
+      if (Array.isArray(newQuotes) && newQuotes.length > 0) {
+        // update quotes and show the first item
+        quotes = newQuotes;
+        showQuote(0);
+      } else {
+        // if selection produced no results, keep previous quotes and show index 0
+        showQuote(0);
+      }
+    } catch (err) {
+      console.warn("Failed to apply selected sources:", err);
+    }
+
+    // close panel (showPanel wired #panel-close to restore previous content)
+    document.getElementById("panel-close")?.click();
   });
 });
 

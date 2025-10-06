@@ -87,7 +87,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  color: var(--text);
+  color: var(--text-quote);
   background: radial-gradient(1200px 800px at 50% -10%, rgba(124, 58, 237, 0.08), transparent 60%),
               radial-gradient(800px 600px at 100% 0%, rgba(37, 99, 235, 0.06), transparent 60%),
               var(--bg);
@@ -160,14 +160,14 @@ canvas#stars {
   font-weight: 800;
   letter-spacing: -0.02em;
   text-transform: none;
-  color: var(--text);
+  color: var(--text-quote);
   line-height: 1;
 }
 
 .brand-sub {
   display: inline-block;
   font-size: 0.95rem;
-  color: var(--text);
+  color: var(--text-quote);
   font-weight: 600;
   /* opacity: 0.9; */
   margin-left: 0.25rem;
@@ -246,7 +246,7 @@ canvas#stars {
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   background: transparent;
-  color: var(--text);
+  color: var(--text-quote);
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
@@ -260,7 +260,7 @@ canvas#stars {
 .btn-ghost {
   background: transparent;
   border-color: transparent;
-  color: var(--text);
+  color: var(--text-quote);
 }
 
 .btn-ghost:hover {
@@ -505,7 +505,7 @@ canvas#stars {
 }
 
 .info a {
-  color: var(--text);
+  color: var(--text-quote);
   text-decoration: none;
   word-break: break-word;
 }

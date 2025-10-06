@@ -38,23 +38,42 @@ Turn every new tab into a small moment of calm with curated quotes. **katahari**
 
 ## ▶️ How to run / test locally
 
-There are two common ways to run or preview the project locally:
+Follow these steps to get the project running for the first time (recommended):
 
-Option A — Load as an unpacked Chrome extension (recommended)
-1. Open Chrome (or any Chromium browser).
-2. Go to chrome://extensions and enable "Developer mode".
-3. Click "Load unpacked" and select the project folder (the root of this repository).
-4. Open a new tab (or chrome-extension://[your-extension-id]/newtab.html) to preview.
+Quick start (recommended for development)
+1. Install dependencies (optional — only needed for the local http-server dev helper):
+   - npm install
+2. Build the JSON quotes bundle (required the first time and whenever you edit files under [`database/quotes/`](database/quotes/index.js:1)):
+   - npm run build
+   This runs [`scripts/build-quotes-json.mjs`](scripts/build-quotes-json.mjs:1) and produces:
+   - [`database/quotes/quotes.json`](database/quotes/quotes.json:1)
+   - [`database/quotes/quotes.byfile.json`](database/quotes/quotes.byfile.json:1)
+3. Start a local preview server:
+   - npm run start
+   By default this serves the project at http://localhost:8080
+4. Open the preview page in your browser:
+   - http://localhost:8080/newtab.html
 
-Option B — Quick local preview (non-extension)
-1. Run a simple local web server from the project root. Examples:
-   - Python 3: `python3 -m http.server 8000`
-   - Node (if installed): `npx http-server -p 8000`
-2. Open http://localhost:8000/newtab.html in your browser.
+Load as an unpacked Chrome (or Chromium) extension
+1. Build the quotes bundle (see step 2) so the extension can use the JSON fallback.
+2. Open your browser and go to chrome://extensions
+3. Enable "Developer mode"
+4. Click "Load unpacked" and select the project root folder
+5. Open a new tab (or chrome-extension://[your-extension-id]/newtab.html) to preview the extension
 
-Notes:
-- When using Option B you won't get extension-specific APIs, but the UI/UX and visuals will render for development and styling.
-- For extension packaging, make sure `manifest.json` has the correct "action" / override for the New Tab if intended.
+Alternative quick preview methods
+- Python: `python3 -m http.server 8000` then open http://localhost:8000/newtab.html
+- Node (no install): `npx http-server -p 8000` then open http://localhost:8000/newtab.html
+
+Useful scripts (see [`package.json`](package.json:1))
+- npm run build — build JSON from JS quote modules (needed initially / after edits)
+- npm run start — run a local http-server for preview
+- npm run pack — create katahari.zip for distribution
+
+Notes
+- When using a local HTTP server (non-extension mode) some extension-only APIs will not be available, but the UI and styling will render for development and testing.
+- If you change quote source modules under [`database/quotes/`](database/quotes/index.js:1), re-run `npm run build` to regenerate the JSON files used by the loader.
+- For theme or UI testing, open the devtools console to inspect messages from [`vendor/main.js`](vendor/main.js:1).
 
 ---
 

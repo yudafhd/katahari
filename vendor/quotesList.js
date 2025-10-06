@@ -20,29 +20,62 @@ const mergedFromModules = () => [
   ...spongebobQuotes,
 ];
 
-export default async function quotesList() {
-  // Try fetching JSON first (avoids import-assertion MIME issues in some environments).
-  // Falls back to dynamic import with assertion only if fetch is not available.
+export default async function quotesList(selectedSources = null) {
+  // Try fetching per-file JSON first so we can filter by source (preferred).
+  try {
+    const respBy = await fetch("../database/quotes/quotes.byfile.json", { cache: "no-store" });
+    if (respBy && respBy.ok) {
+      const byFile = await respBy.json();
+      if (selectedSources && Array.isArray(selectedSources) && selectedSources.length > 0) {
+        // selectedSources are expected to be basenames: e.g. ["book","anime-manga"]
+        const result = [];
+        for (const key of selectedSources) {
+          if (byFile[key]) result.push(...byFile[key]);
+        }
+        if (result.length) return result;
+        // if selection produced nothing, fall through to other fallbacks
+      } else {
+        // no filter requested — return flattened all quotes
+        return Object.values(byFile).flat();
+      }
+    }
+  } catch (err) {
+    // unable to fetch byfile JSON — continue to next strategy
+  }
+
+  // Try fetching flat JSON fallback
   try {
     const resp = await fetch("../database/quotes/quotes.json", { cache: "no-store" });
     if (resp && resp.ok) {
       const data = await resp.json();
       if (Array.isArray(data)) {
+        // If a filter was requested but we only have a flat list, return the full list (no reliable source metadata).
         return data;
       }
     }
   } catch (err) {
-    // fetch failed — fall back to dynamic import with assertion (for environments that support it)
-    try {
-      const jsonModule = await import("../database/quotes/quotes.json", { assert: { type: "json" } });
-      if (jsonModule && Array.isArray(jsonModule.default)) {
-        return jsonModule.default;
-      }
-    } catch (err2) {
-      // JSON not present or import assertions not supported — final fallback to JS modules below
-    }
+    // ignore and continue to module fallback
   }
 
-  // Fallback: return merged arrays from existing JS modules
+  // Final fallback: use existing JS module arrays. If a filter is provided, map keys to module arrays.
+  const merged = mergedFromModules();
+
+  if (selectedSources && Array.isArray(selectedSources) && selectedSources.length > 0) {
+    const map = {
+      "general": generalQuotes,
+      "book": bookQuotes,
+      "anime-manga": animeMangaQuotes,
+      "game": gameQuotes,
+      "movie": movieQuotes,
+      "spongebob": spongebobQuotes,
+    };
+    const result = [];
+    for (const key of selectedSources) {
+      if (map[key]) result.push(...map[key]);
+    }
+    if (result.length) return result;
+    // if nothing matched, return merged as a safe default
+  }
+
   return mergedFromModules();
 }
