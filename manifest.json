@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Katahari Quotes",
-  "version": "2",
+  "version": "3",
   "description": "Get inspired with quotes from songs, movies, books, scientists & icons—shown every time you open a new tab.",
   "permissions": ["storage"],
   "chrome_url_overrides": {

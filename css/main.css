@@ -248,6 +248,7 @@ canvas#stars {
   background: transparent;
   color: var(--text);
   font-size: 0.95rem;
+  font-weight: 700;
   cursor: pointer;
   transition: transform var(--duration) var(--easing), box-shadow var(--duration) var(--easing), background var(--duration) var(--easing), border-color var(--duration) var(--easing);
   gap: 0.5rem;
@@ -409,10 +410,15 @@ canvas#stars {
   content: "— ";
 }
 
-.main .content .btn-previous, .btn-next {
+.main 
+.content 
+.btn-previous, 
+.btn-next, 
+.btn-random,
+.btn-copy,
+.btn-share {
   color: var(--text-quote);
 }
-
 
 /* Utility card and info blocks (kept, restyled) */
 .card {

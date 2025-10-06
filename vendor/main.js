@@ -340,22 +340,3 @@ document.getElementById("button-donate").addEventListener("click", () => {
     </div>
   `);
 });
-
-/* Contact: show contact info in a nicely formatted panel (preserve previous content) */
-document.getElementById("button-contact").addEventListener("click", () => {
-  showPanel(`
-    <figcaption style="margin:0 0 12px 0;text-align:center;font-size:0.85rem;color:var(--muted);margin-top:8px">Contact</figcaption>
-      <div class="info" style="margin-bottom:8px;">
-        <label>Email:</label>
-        <a  style="color:var(--muted);" href="mailto:ahmadyudafahrudin@gmail.com">ahmadyudafahrudin@gmail.com</a>
-      </div>
-      <div class="info" style="margin-bottom:8px;">
-        <label>GitHub:</label>
-        <a  style="color:var(--muted);"  href="https://github.com/yudafhd" target="_blank" rel="noopener">github.com/yudafhd</a>
-      </div>
-      <div class="info" style="margin-bottom:4px;">
-        <label>LinkedIn:</label>
-        <a style="color:var(--muted);"  href="https://www.linkedin.com/in/yudafahrudin" target="_blank" rel="noopener">linkedin.com/in/yudafahrudin</a>
-      </div>
-  `);
-});
