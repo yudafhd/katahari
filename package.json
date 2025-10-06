@@ -8,6 +8,7 @@
     "start": "npx http-server ./ -p 8080 -c-1",
     "serve": "npm run start",
     "dev": "npm run start",
+    "build": "node ./scripts/build-quotes-json.mjs",
     "pack": "zip -r katahari.zip ."
   },
   "author": "",

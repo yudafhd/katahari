@@ -308,12 +308,10 @@ function drawScene() {
     const delta = nowPerf - (lastFrameTime || 0);
     lastFrameTime = nowPerf;
     if (delta < frameInterval) {
-        console.log(2)
         // schedule next frame but skip heavy work if we're ahead of schedule
         requestAnimationFrame(drawScene);
         return;
     }
-    console.log(2)
     requestAnimationFrame(drawScene);
 }
 

@@ -1,5 +1,5 @@
 import storage from "./chromeStorageHelper.js";
-import quotesList from "../database/quotes/index.js";
+import quotesList from "../vendor/quotesList.js";
 import { themes } from "./themes.js";
 
 const defaultLanguage = {
@@ -89,7 +89,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   const language = katahariLanguage ? JSON.parse(katahariLanguage) : { code: "EN" };
   const blockquote = document.getElementById("blockquote");
   const cite = document.getElementById("cite");
-  const quotes = quotesList();
+  const quotes = await quotesList();
+  console.log(quotes)
   let currentIndex = Math.max(0, Math.floor(Math.random() * (quotes.length || 1)));
 
   const showQuote = (idx) => {
