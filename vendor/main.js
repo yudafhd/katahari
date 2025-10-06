@@ -314,14 +314,14 @@ document.getElementById("button-sources")?.addEventListener("click", async () =>
     .join("");
 
   const html = `
-    <div style="padding:12px;max-width:560px;margin:0 auto">
+    <div style="padding:12px;max-width:560px;margin:0 auto;color:var(--text-quote);">
       <h3 style="margin:0 0 8px 0">Select Quote Sources</h3>
       <div id="sources-list" style="display:flex;flex-wrap:wrap;gap:8px">${inputs}</div>
       <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
         <button id="sources-save" class="btn btn-primary">Save</button>
-        <button id="sources-all" class="btn btn-ghost">Select All</button>
-        <button id="sources-none" class="btn btn-ghost">Clear</button>
-        <button id="panel-close" class="btn btn-ghost">Close</button>
+        <button id="sources-all" class="btn btn-ghost btn-select-all">Select All</button>
+        <button id="sources-none" class="btn btn-ghost btn-clear">Clear</button>
+        <button id="panel-close" class="btn btn-ghost btn-close">Close</button>
       </div>
     </div>
   `;

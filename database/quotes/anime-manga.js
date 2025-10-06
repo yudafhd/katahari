@@ -8,8 +8,7 @@ const animeMangaQuotes = [
     {
         code: "NRT002",
         content: "I never go back on my word! That's my nindō!",
-        content_id:
-            "Aku tidak pernah menarik kata-kataku! Itu adalah jalan ninjaku!",
+        content_id: "Aku tidak pernah menarik kata-kataku! Itulah jalan ninjaku!",
         credit: "Naruto Uzumaki, Naruto",
     },
     {
@@ -29,8 +28,7 @@ const animeMangaQuotes = [
     {
         code: "DBZ005",
         content: "Power comes in response to a need, not a desire.",
-        content_id:
-            "Kekuatan muncul sebagai jawaban atas kebutuhan, bukan keinginan.",
+        content_id: "Kekuatan muncul sebagai jawaban atas kebutuhan, bukan keinginan.",
         credit: "Goku, Dragon Ball Z",
     },
     {
@@ -263,8 +261,7 @@ const animeMangaQuotes = [
     {
         code: "FT038",
         content: "We don’t die for our friends, we live for them.",
-        content_id:
-            "Kita tidak mati demi teman-teman kita, kita hidup untuk mereka.",
+        content_id: "Kita tidak mati demi teman-teman kita, kita hidup untuk mereka.",
         credit: "Erza Scarlet, Fairy Tail",
     },
     {
@@ -317,7 +314,8 @@ const animeMangaQuotes = [
     },
     {
         code: "BLE046",
-        content: "We fear because we value life. We should enjoy it while we can.",
+        content:
+            "We fear because we value life. We should enjoy it while we can.",
         content_id:
             "Kita takut karena kita menghargai hidup. Kita harus menikmatinya selagi bisa.",
         credit: "Kisuke Urahara, Bleach",
@@ -353,12 +351,14 @@ const animeMangaQuotes = [
             "Nikmatilah hal-hal kecil dalam hidup, karena suatu hari kamu akan sadar bahwa itu adalah hal besar.",
         credit: "Tomoya Okazaki, Clannad",
     },
+
+    // ---- Q variants ----
     {
         code: "OP-Q001",
         content:
             "Power isn't determined by your size, but the size of your heart and dreams.",
         content_id:
-            "Kekuatan tidak ditentukan oleh ukuran tubuhmu, tetapi oleh besarnya hatimu dan impianmu.",
+            "Kekuatan tidak ditentukan oleh ukuran tubuhmu, tetapi oleh besarnya hati dan impianmu.",
         credit: "Monkey D. Luffy, One Piece",
     },
     {
@@ -404,8 +404,7 @@ const animeMangaQuotes = [
     {
         code: "HXH-Q008",
         content: "An apology is a promise to do things differently next time.",
-        content_id:
-            "Permintaan maaf adalah janji untuk berbuat berbeda di lain waktu.",
+        content_id: "Permintaan maaf adalah janji untuk berbuat berbeda di lain waktu.",
         credit: "Killua Zoldyck, Hunter x Hunter",
     },
     {
@@ -413,13 +412,14 @@ const animeMangaQuotes = [
         content:
             "I don't want to conquer anything. I just think the guy with the most freedom in this whole ocean is the Pirate King!",
         content_id:
-            "Aku tidak ingin menaklukkan apapun. Aku hanya berpikir orang yang paling bebas di lautan ini adalah Raja Bajak Laut!",
+            "Aku tidak ingin menaklukkan apa pun. Aku hanya berpikir orang yang paling bebas di seluruh lautan ini adalah Raja Bajak Laut!",
         credit: "Monkey D. Luffy, One Piece",
     },
     {
         code: "NT-Q010",
         content: "A person grows up when he's able to overcome hardships.",
-        content_id: "Seseorang tumbuh dewasa ketika dia mampu mengatasi kesulitan.",
+        content_id:
+            "Seseorang tumbuh dewasa ketika dia mampu mengatasi kesulitan.",
         credit: "Jiraiya, Naruto",
     },
     {
@@ -470,7 +470,7 @@ const animeMangaQuotes = [
         content:
             "Sometimes the best way to make people listen is to punch them in the face.",
         content_id:
-            "Terkadang cara terbaik untuk membuat orang mendengarkan adalah dengan meninju wajah mereka.",
+            "Terkadang cara terbaik membuat orang mendengarkan adalah meninju wajah mereka.",
         credit: "Monkey D. Luffy, One Piece",
     },
     {
@@ -481,7 +481,8 @@ const animeMangaQuotes = [
     },
     {
         code: "NT-Q019",
-        content: "In this world, wherever there is light — there are also shadows.",
+        content:
+            "In this world, wherever there is light — there are also shadows.",
         content_id: "Di dunia ini, di mana ada cahaya — selalu ada bayangan.",
         credit: "Itachi Uchiha, Naruto",
     },
@@ -496,21 +497,19 @@ const animeMangaQuotes = [
     {
         code: "OP-Q021",
         content: "If you don't take risks, you can't create a future.",
-        content_id:
-            "Jika kamu tidak mengambil risiko, kamu tidak bisa menciptakan masa depan.",
+        content_id: "Jika kamu tidak mengambil risiko, kamu tidak bisa menciptakan masa depan.",
         credit: "Monkey D. Luffy, One Piece",
     },
     {
         code: "DBZ-Q022",
         content: "Push through the pain. Giving up hurts more.",
-        content_id: "Teruskan melewati rasa sakit. Menyerah lebih menyakitkan.",
+        content_id: "Terobos rasa sakit. Menyerah lebih menyakitkan.",
         credit: "Vegeta, Dragon Ball Z",
     },
     {
         code: "OPM-Q023",
         content: "Human strength lies in the ability to change yourself.",
-        content_id:
-            "Kekuatan manusia terletak pada kemampuan untuk mengubah diri sendiri.",
+        content_id: "Kekuatan manusia terletak pada kemampuan mengubah diri sendiri.",
         credit: "Saitama, One Punch Man",
     },
     {
@@ -542,7 +541,8 @@ const animeMangaQuotes = [
     {
         code: "HXH-Q028",
         content: "A person grows up when he's able to overcome hardships.",
-        content_id: "Seseorang tumbuh dewasa ketika dia mampu mengatasi kesulitan.",
+        content_id:
+            "Seseorang tumbuh dewasa ketika dia mampu mengatasi kesulitan.",
         credit: "Jiraiya, Naruto",
     },
     {
@@ -627,13 +627,14 @@ const animeMangaQuotes = [
     },
     {
         code: "NAR-Q040",
-        content: "When you give up, your dreams and everything else—they're gone.",
-        content_id: "Saat kamu menyerah, impian dan segalanya—semuanya lenyap.",
+        content:
+            "When you give up, your dreams and everything else—they're gone.",
+        content_id:
+            "Saat kamu menyerah, impian dan segalanya—semuanya lenyap.",
         credit: "Naruto Uzumaki, Naruto Shippuden",
     },
 
-    // from gemini
-
+    // ---- from gemini (AQxxx) ----
     {
         code: "AQ001",
         content: "People die when they are killed.",
@@ -676,7 +677,7 @@ const animeMangaQuotes = [
         content:
             "Whatever you lose, you'll find it again. But what you throw away you'll never get back.",
         content_id:
-            "Apapun yang hilang darimu, kau akan menemukannya lagi. Tapi apa yang kau buang, tidak akan pernah kembali.",
+            "Apa pun yang hilang darimu, kau akan menemukannya lagi. Tapi apa yang kau buang tidak akan pernah kembali.",
         credit: "Kenshin Himura, Rurouni Kenshin",
     },
     {
@@ -699,7 +700,7 @@ const animeMangaQuotes = [
         content:
             "It’s not the face that makes someone a monster, it’s the choices they make with their lives.",
         content_id:
-            "Bukan wajah yang membuat seseorang menjadi monster, tapi pilihan yang mereka buat dalam hidup mereka.",
+            "Bukan wajah yang membuat seseorang menjadi monster, melainkan pilihan yang mereka buat dalam hidup mereka.",
         credit: "Naruto Uzumaki, Naruto",
     },
     {
@@ -707,7 +708,7 @@ const animeMangaQuotes = [
         content:
             "A lesson without pain is meaningless. That's because no one can gain without sacrificing something.",
         content_id:
-            "Pelajaran tanpa rasa sakit itu tidak ada artinya. Itu karena tidak ada yang bisa diperoleh tanpa mengorbankan sesuatu.",
+            "Pelajaran tanpa rasa sakit itu tidak ada artinya. Karena tak ada yang bisa diperoleh tanpa mengorbankan sesuatu.",
         credit: "Edward Elric, Fullmetal Alchemist: Brotherhood",
     },
     {
@@ -723,7 +724,7 @@ const animeMangaQuotes = [
         content:
             "If you don't like your destiny, don't accept it. Instead, have the courage to change it the way you want it to be.",
         content_id:
-            "Jika kau tidak menyukai takdirmu, jangan menerimanya. Sebaliknya, milikilah keberanian untuk mengubahnya sesuai keinginanmu.",
+            "Jika kau tidak menyukai takdirmu, jangan menerimanya. Milikilah keberanian untuk mengubahnya sesuai keinginanmu.",
         credit: "Naruto Uzumaki, Naruto",
     },
     {
@@ -752,7 +753,8 @@ const animeMangaQuotes = [
         code: "AQ016",
         content:
             "Sometimes, the things that matter the most are right in front of you.",
-        content_id: "Terkadang, hal-hal yang paling penting ada tepat di depanmu.",
+        content_id:
+            "Terkadang, hal-hal yang paling penting ada tepat di depanmu.",
         credit: "Gray Fullbuster, Fairy Tail",
     },
     {
@@ -771,8 +773,10 @@ const animeMangaQuotes = [
     },
     {
         code: "AQ019",
-        content: "If you just submit yourself to fate, then that's the end of it.",
-        content_id: "Jika kau hanya pasrah pada takdir, maka itulah akhirnya.",
+        content:
+            "If you just submit yourself to fate, then that's the end of it.",
+        content_id:
+            "Jika kau hanya pasrah pada takdir, maka selesai sudah.",
         credit: "Keiichi Maebara, Higurashi: When They Cry",
     },
     {
@@ -780,14 +784,15 @@ const animeMangaQuotes = [
         content:
             "Even if I die, you keep living, okay? Live to see the end of this world, and to see why it was born. Live to see why a weak girl like me ended up here.",
         content_id:
-            "Bahkan jika aku mati, kau tetaplah hidup, oke? Hiduplah untuk melihat akhir dunia ini, dan untuk melihat mengapa dunia ini lahir. Hiduplah untuk melihat mengapa gadis lemah sepertiku berakhir di sini.",
+            "Bahkan jika aku mati, kau tetaplah hidup, oke? Hiduplah untuk melihat akhir dunia ini, dan melihat mengapa dunia ini lahir. Hiduplah untuk mengetahui mengapa gadis lemah sepertiku berakhir di sini.",
         credit: "Sachi, Sword Art Online",
     },
     {
         code: "AQ021",
         content:
             "It is at the moment of death that humanity has realized the value of life.",
-        content_id: "Pada saat kematianlah umat manusia menyadari nilai kehidupan.",
+        content_id:
+            "Pada saat kematianlah umat manusia menyadari nilai kehidupan.",
         credit: "Gilgamesh, Fate/Zero",
     },
     {
@@ -795,7 +800,7 @@ const animeMangaQuotes = [
         content:
             "The weak are destined to lie beneath the boots of the strong. If that angers you, overcome your deficits.",
         content_id:
-            "Yang lemah ditakdirkan untuk berada di bawah sepatu bot yang kuat. Jika itu membuatmu marah, atasi kekuranganmu.",
+            "Yang lemah ditakdirkan berada di bawah sepatu bot yang kuat. Jika itu membuatmu marah, atasi kekuranganmu.",
         credit: "Esdeath, Akame ga Kill!",
     },
     {
@@ -809,7 +814,7 @@ const animeMangaQuotes = [
         content:
             "Don’t be so quick to throw away your life. No matter how disgraceful or embarrassing it may be, you need to keep struggling to find your way out until the very end.",
         content_id:
-            "Jangan terlalu cepat membuang hidupmu. Tidak peduli seberapa memalukan atau memalukannya, kau harus terus berjuang mencari jalan keluar sampai akhir.",
+            "Jangan terlalu cepat membuang hidupmu. Tak peduli seberapa memalukan keadaannya, kau harus terus berjuang mencari jalan keluar sampai akhir.",
         credit: "Clare, Claymore",
     },
     {
@@ -817,7 +822,7 @@ const animeMangaQuotes = [
         content:
             "A life that lives without doing anything is the same as a slow death.",
         content_id:
-            "Hidup yang dijalani tanpa melakukan apa pun sama dengan kematian yang lambat.",
+            "Hidup yang dijalani tanpa melakukan apa pun sama saja dengan kematian yang lambat.",
         credit: "Lelouch Lamperouge, Code Geass",
     },
     {
@@ -825,7 +830,7 @@ const animeMangaQuotes = [
         content:
             "If you keep on hiding your true feelings, who is going to be happy? If you are sad, you should say it out loud!",
         content_id:
-            "Jika kau terus menyembunyikan perasaanmu yang sebenarnya, siapa yang akan bahagia? Jika kau sedih, kau harus mengatakannya dengan lantang!",
+            "Jika kau terus menyembunyikan perasaanmu yang sebenarnya, siapa yang akan bahagia? Jika kau sedih, katakanlah dengan lantang!",
         credit: "Haruhi Fujioka, Ouran High School Host Club",
     },
     {
@@ -833,7 +838,7 @@ const animeMangaQuotes = [
         content:
             "No matter how deep the night, it always turns to day, eventually.",
         content_id:
-            "Tidak peduli seberapa larut malam, pada akhirnya akan selalu menjadi siang.",
+            "Tak peduli seberapa larut malam, akhirnya akan menjadi siang.",
         credit: "Brook, One Piece",
     },
     {
@@ -841,7 +846,7 @@ const animeMangaQuotes = [
         content:
             "The moment you think of giving up, think of the reason why you held on so long.",
         content_id:
-            "Saat kau berpikir untuk menyerah, pikirkan alasan mengapa kau bertahan begitu lama.",
+            "Saat kau berpikir untuk menyerah, pikirkan alasan mengapa kau bertahan selama ini.",
         credit: "Natsu Dragneel, Fairy Tail",
     },
     {
@@ -849,13 +854,13 @@ const animeMangaQuotes = [
         content:
             "If you have time to think of a beautiful end, then live beautifully until the end.",
         content_id:
-            "Jika kau punya waktu untuk memikirkan akhir yang indah, maka hiduplah dengan indah sampai akhir.",
+            "Jika kau punya waktu memikirkan akhir yang indah, hiduplah dengan indah sampai akhir.",
         credit: "Gintoki Sakata, Gintama",
     },
     {
         code: "AQ030",
         content: "Revenge just breeds more revenge.",
-        content_id: "Balas dendam hanya melahirkan lebih banyak balas dendam.",
+        content_id: "Balas dendam hanya melahirkan balas dendam yang lebih banyak.",
         credit: "Jiraiya, Naruto",
     },
     {
@@ -871,13 +876,14 @@ const animeMangaQuotes = [
         content:
             "I am not a hero because I want to be. I am a hero because I have to be.",
         content_id:
-            "Aku bukan pahlawan karena aku ingin menjadi pahlawan. Aku adalah pahlawan karena aku harus menjadi pahlawan.",
+            "Aku bukan pahlawan karena aku ingin. Aku pahlawan karena aku harus.",
         credit: "Saitama, One-Punch Man",
     },
     {
         code: "AQ033",
         content: "How can you move forward if you keep regretting the past?",
-        content_id: "Bagaimana kau bisa maju jika kau terus menyesali masa lalu?",
+        content_id:
+            "Bagaimana kau bisa maju jika terus menyesali masa lalu?",
         credit: "Edward Elric, Fullmetal Alchemist",
     },
     {
@@ -885,7 +891,7 @@ const animeMangaQuotes = [
         content:
             "You can't always hold on to the things that are important. By letting them go we gain something else.",
         content_id:
-            "Kau tidak bisa selalu berpegang pada hal-hal yang penting. Dengan melepaskannya kita mendapatkan sesuatu yang lain.",
+            "Kau tidak bisa selalu berpegang pada hal-hal penting. Dengan melepaskannya, kita mendapatkan hal lain.",
         credit: "Eikichi Onizuka, Great Teacher Onizuka",
     },
     {
@@ -893,13 +899,14 @@ const animeMangaQuotes = [
         content:
             "People’s lives don’t end when they die. It ends when they lose faith.",
         content_id:
-            "Hidup manusia tidak berakhir ketika mereka mati. Hidup berakhir ketika mereka kehilangan kepercayaan.",
+            "Hidup manusia tidak berakhir saat mereka mati. Hidup berakhir ketika mereka kehilangan keyakinan.",
         credit: "Itachi Uchiha, Naruto",
     },
     {
         code: "AQ036",
         content: "Even the strongest of opponents always has a weakness.",
-        content_id: "Bahkan lawan terkuat sekalipun selalu memiliki kelemahan.",
+        content_id:
+            "Bahkan lawan terkuat sekalipun selalu punya kelemahan.",
         credit: "L Lawliet, Death Note",
     },
     {
@@ -907,7 +914,7 @@ const animeMangaQuotes = [
         content:
             "Sometimes I do feel like I’m a failure. Like there’s no hope for me. But even so, I’m not gonna give up. Ever!",
         content_id:
-            "Terkadang aku merasa seperti orang gagal. Seperti tidak ada harapan bagiku. Tapi meski begitu, aku tidak akan menyerah. Tidak akan pernah!",
+            "Kadang aku merasa seperti gagal. Seolah tak ada harapan bagiku. Tapi tetap saja, aku tidak akan menyerah. Tidak pernah!",
         credit: "Izuku Midoriya, My Hero Academia",
     },
     {
@@ -915,7 +922,7 @@ const animeMangaQuotes = [
         content:
             "If you wanna make people dream, you've gotta start by believing in that dream yourself!",
         content_id:
-            "Jika kau ingin membuat orang bermimpi, kau harus mulai dengan percaya pada mimpi itu sendiri!",
+            "Jika kau ingin membuat orang bermimpi, mulailah dengan percaya pada mimpimu sendiri!",
         credit: "Nino Nakano, The Quintessential Quintuplets",
     },
     {
@@ -923,7 +930,7 @@ const animeMangaQuotes = [
         content:
             "The difference between a novice and a master is that a master has failed more times than a novice has ever tried.",
         content_id:
-            "Perbedaan antara seorang pemula dan seorang master adalah bahwa seorang master telah gagal lebih banyak daripada yang pernah dicoba oleh seorang pemula.",
+            "Perbedaan antara pemula dan master adalah master telah gagal lebih banyak daripada jumlah percobaan seorang pemula.",
         credit: "Koro-sensei, Assassination Classroom",
     },
     {
@@ -931,14 +938,13 @@ const animeMangaQuotes = [
         content:
             "It's not about whether it's possible or not, I'm doing it because I want to.",
         content_id:
-            "Ini bukan tentang apakah itu mungkin atau tidak, aku melakukannya karena aku mau.",
+            "Ini bukan tentang mungkin atau tidaknya, aku melakukannya karena aku mau.",
         credit: "Monkey D. Luffy, One Piece",
     },
     {
         code: "AQ041",
         content: "I'll leave tomorrow's problems to tomorrow's me.",
-        content_id:
-            "Aku akan menyerahkan masalah hari esok pada diriku di hari esok.",
+        content_id: "Masalah esok biar diurus diriku yang besok.",
         credit: "Saitama, One-Punch Man",
     },
     {
@@ -946,7 +952,7 @@ const animeMangaQuotes = [
         content:
             "Thinking you’re no-good and worthless is the worst thing you can do.",
         content_id:
-            "Berpikir bahwa kau tidak berguna dan tidak berharga adalah hal terburuk yang bisa kau lakukan.",
+            "Menganggap dirimu tak berguna adalah hal terburuk yang bisa kau lakukan.",
         credit: "Nobita Nobi, Doraemon",
     },
     {
@@ -962,7 +968,7 @@ const animeMangaQuotes = [
         content:
             "If you can't find a reason to fight, then you shouldn't be fighting.",
         content_id:
-            "Jika kau tidak dapat menemukan alasan untuk bertarung, maka kau tidak seharusnya bertarung.",
+            "Jika kau tak menemukan alasan untuk bertarung, maka kau tak seharusnya bertarung.",
         credit: "Akame, Akame ga Kill!",
     },
     {
@@ -970,7 +976,7 @@ const animeMangaQuotes = [
         content:
             "Humans die. Animals die. Plants die. Even stars die. It's a cycle of life. There's nothing sad about it.",
         content_id:
-            "Manusia mati. Hewan mati. Tumbuhan mati. Bahkan bintang pun mati. Ini adalah siklus kehidupan. Tidak ada yang menyedihkan tentang itu.",
+            "Manusia mati. Hewan mati. Tumbuhan mati. Bahkan bintang pun mati. Itu siklus kehidupan. Tak ada yang perlu disedihkan.",
         credit: "Maka Albarn, Soul Eater",
     },
     {
@@ -978,7 +984,7 @@ const animeMangaQuotes = [
         content:
             "Don’t live your life making excuses. The one making your choices is yourself.",
         content_id:
-            "Jangan menjalani hidupmu dengan membuat alasan. Yang membuat pilihanmu adalah dirimu sendiri.",
+            "Jangan jalani hidup dengan alasan. Pembuat keputusanmu adalah dirimu sendiri.",
         credit: "Mugen, Samurai Champloo",
     },
     {
@@ -986,7 +992,7 @@ const animeMangaQuotes = [
         content:
             "To abandon your duty is a disgrace. To die is merely to lose your life. That is all.",
         content_id:
-            "Meninggalkan tugasmu adalah aib. Mati hanyalah kehilangan nyawamu. Itu saja.",
+            "Meninggalkan tugas adalah aib. Mati hanyalah kehilangan nyawa. Itu saja.",
         credit: "Erwin Smith, Attack on Titan",
     },
     {
@@ -994,7 +1000,7 @@ const animeMangaQuotes = [
         content:
             "You should enjoy the little detours to the fullest. Because that's where you'll find the things more important than what you want.",
         content_id:
-            "Kau harus menikmati jalan memutar kecil sepenuhnya. Karena di situlah kau akan menemukan hal-hal yang lebih penting daripada yang kau inginkan.",
+            "Nikmatilah jalan memutar kecil sepenuhnya. Di sanalah kau menemukan hal-hal yang lebih penting daripada yang kau inginkan.",
         credit: "Ging Freecss, Hunter x Hunter",
     },
     {
@@ -1008,10 +1014,431 @@ const animeMangaQuotes = [
         content:
             "Even if you're a hero, you're still human. You're allowed to make mistakes.",
         content_id:
-            "Meskipun kau seorang pahlawan, kau tetap manusia. Kau boleh membuat kesalahan.",
+            "Meski kau seorang pahlawan, kau tetap manusia. Kau boleh membuat kesalahan.",
         credit: "All Might, My Hero Academia",
     },
-];
+    {
+        code: "KNY101",
+        content: "Set your heart ablaze!",
+        content_id: "Bakar semangatmu!",
+        credit: "Kyojuro Rengoku, Demon Slayer: Kimetsu no Yaiba",
+    },
+    {
+        code: "AOT102",
+        content: "The only thing we're allowed to do is to believe we won't regret the choice we made.",
+        content_id: "Satu-satunya yang boleh kita lakukan adalah percaya bahwa kita takkan menyesali pilihan yang kita buat.",
+        credit: "Levi Ackerman, Attack on Titan",
+    },
+    {
+        code: "ORE103",
+        content: "Youth is a lie. It is nothing but evil.",
+        content_id: "Masa muda adalah kebohongan. Tak lain hanyalah kejahatan.",
+        credit: "Hachiman Hikigaya, Oregairu",
+    },
+    {
+        code: "NGE104",
+        content: "I mustn't run away.",
+        content_id: "Aku tidak boleh lari.",
+        credit: "Shinji Ikari, Neon Genesis Evangelion",
+    },
+    {
+        code: "RK105",
+        content: "I will not kill.",
+        content_id: "Aku tidak akan membunuh.",
+        credit: "Himura Kenshin, Rurouni Kenshin",
+    },
+    {
+        code: "MUS106",
+        content: "Not everything has a name. Not everything can be seen.",
+        content_id: "Tak semua hal punya nama. Tak semua hal bisa terlihat.",
+        credit: "Ginko, Mushishi",
+    },
+    {
+        code: "LAIN107",
+        content: "No matter where you go, everyone's connected.",
+        content_id: "Ke mana pun kau pergi, semua orang saling terhubung.",
+        credit: "Lain Iwakura, Serial Experiments Lain",
+    },
+    {
+        code: "GITS108",
+        content: "Overspecialize, and you breed in weakness.",
+        content_id: "Terlalu terspesialisasi hanya akan melahirkan kelemahan.",
+        credit: "Motoko Kusanagi, Ghost in the Shell",
+    },
+    {
+        code: "OP109",
+        content: "Nothing happened.",
+        content_id: "Tidak terjadi apa-apa.",
+        credit: "Roronoa Zoro, One Piece",
+    },
+    {
+        code: "SM110",
+        content: "In the name of the Moon, I'll punish you!",
+        content_id: "Atas nama Bulan, aku akan menghukummu!",
+        credit: "Usagi Tsukino, Sailor Moon",
+    },
+    {
+        code: "HYO111",
+        content: "If I don't have to do it, I won't. If I have to, I'll do it quickly.",
+        content_id: "Jika aku tak perlu melakukannya, aku tak akan melakukannya. Jika harus, akan kulakukan dengan cepat.",
+        credit: "Houtarou Oreki, Hyouka",
+    },
+    {
+        code: "KIKI112",
+        content: "We each need to find our own inspiration.",
+        content_id: "Kita masing-masing harus menemukan inspirasi kita sendiri.",
+        credit: "Kiki, Kiki's Delivery Service",
+    },
+    {
+        code: "SG113",
+        content: "El Psy Congroo.",
+        content_id: "El Psy Congroo.",
+        credit: "Rintarou Okabe, Steins;Gate",
+    },
+    {
+        code: "VIO114",
+        content: "I want to know what ‘I love you’ means.",
+        content_id: "Aku ingin tahu apa arti ‘aku mencintaimu’.",
+        credit: "Violet Evergarden, Violet Evergarden",
+    },
+    {
+        code: "MP100115",
+        content: "It's okay to run away. You can come back stronger.",
+        content_id: "Tak apa untuk melarikan diri. Kau bisa kembali dengan lebih kuat.",
+        credit: "Reigen Arataka, Mob Psycho 100",
+    },
+    {
+        code: "MP100116",
+        content: "You are you, and that is your power.",
+        content_id: "Kau adalah dirimu sendiri, dan itulah kekuatanmu.",
+        credit: "Shigeo “Mob” Kageyama, Mob Psycho 100",
+    },
+    {
+        code: "S&W117",
+        content: "Call me Holo, the Wise Wolf.",
+        content_id: "Panggil aku Holo, Serigala Bijak.",
+        credit: "Holo, Spice and Wolf",
+    },
+    {
+        code: "KNB118",
+        content: "I am a shadow.",
+        content_id: "Aku adalah bayangan.",
+        credit: "Tetsuya Kuroko, Kuroko's Basketball",
+    },
+    {
+        code: "DS119",
+        content: "Ten billion percent!",
+        content_id: "Sepuluh miliar persen!",
+        credit: "Senku Ishigami, Dr. Stone",
+    },
+    {
+        code: "VIN120",
+        content: "You have no enemies. No one does.",
+        content_id: "Kau tak punya musuh. Tak seorang pun yang punya.",
+        credit: "Thors, Vinland Saga",
+    },
+    {
+        code: "MIX201",
+        content: "Sometimes the only way to escape the cage is to let yourself out.",
+        content_id: "Terkadang satu-satunya cara keluar dari kandang adalah melepaskan dirimu sendiri.",
+        credit: "Armin Arlert, Attack on Titan",
+    },
+    {
+        code: "MIX202",
+        content: "Give your heart!",
+        content_id: "Serahkan hatimu!",
+        credit: "Erwin Smith, Attack on Titan",
+    },
+    {
+        code: "MIX203",
+        content: "The strong should live and the weak should die? Then I'll get stronger.",
+        content_id: "Yang kuat harus hidup dan yang lemah harus mati? Kalau begitu aku akan menjadi kuat.",
+        credit: "Thorfinn, Vinland Saga",
+    },
+    {
+        code: "MIX204",
+        content: "Man proposes, God disposes.",
+        content_id: "Manusia berencana, Tuhan yang menentukan.",
+        credit: "Askeladd, Vinland Saga",
+    },
+    {
+        code: "MIX205",
+        content: "Yare yare daze.",
+        content_id: "Ya ampun, merepotkan.",
+        credit: "Jotaro Kujo, JoJo's Bizarre Adventure",
+    },
+    {
+        code: "MIX206",
+        content: "A lesson learned the hard way is a lesson you never forget.",
+        content_id: "Pelajaran yang dipelajari dengan susah payah adalah pelajaran yang takkan terlupa.",
+        credit: "Jotaro Kujo, JoJo's Bizarre Adventure",
+    },
+    {
+        code: "MIX207",
+        content: "Even if no one believes in you, walk forward with your own legs.",
+        content_id: "Meski tak ada yang percaya padamu, berjalanlah maju dengan kakimu sendiri.",
+        credit: "Tanjiro Kamado, Demon Slayer",
+    },
+    {
+        code: "MIX208",
+        content: "A scoundrel's smile can save a life.",
+        content_id: "Senyum seorang penipu pun bisa menyelamatkan nyawa.",
+        credit: "Reigen Arataka, Mob Psycho 100",
+    },
+    {
+        code: "MIX209",
+        content: "People’s lives are not like novels. They’re not bound by logic.",
+        content_id: "Hidup manusia tidak seperti novel. Ia tidak terikat logika.",
+        credit: "Gintoki Sakata, Gintama",
+    },
+    {
+        code: "MIX210",
+        content: "The world is not beautiful, therefore it is—because we give it meaning.",
+        content_id: "Dunia tidak indah, dan karenanya indah—karena kitalah yang memberinya makna.",
+        credit: "Shinobu Oshino, Monogatari Series",
+    },
+    {
+        code: "MIX211",
+        content: "If you don’t take care of yourself, you can’t take care of others.",
+        content_id: "Jika kamu tidak menjaga dirimu, kamu takkan bisa menjaga orang lain.",
+        credit: "Kaguya Shinomiya, Kaguya-sama: Love Is War",
+    },
+    {
+        code: "MIX212",
+        content: "A fake smile is the easiest armor.",
+        content_id: "Senyum palsu adalah pelindung termudah.",
+        credit: "Ai Hayasaka, Kaguya-sama: Love Is War",
+    },
+    {
+        code: "MIX213",
+        content: "If you're gonna hit it, hit it until it breaks.",
+        content_id: "Kalau kau mau menghancurkannya, hancurkan sampai benar-benar pecah.",
+        credit: "Megumi Fushiguro, Jujutsu Kaisen",
+    },
+    {
+        code: "MIX214",
+        content: "A curse can only be met with greater resolve.",
+        content_id: "Kutukan hanya bisa dihadapi dengan tekad yang lebih besar.",
+        credit: "Yuji Itadori, Jujutsu Kaisen",
+    },
+    {
+        code: "MIX215",
+        content: "I'm not alone anymore.",
+        content_id: "Aku tidak sendirian lagi.",
+        credit: "Atsushi Nakajima, Bungou Stray Dogs",
+    },
+    {
+        code: "MIX216",
+        content: "The wind is rising! We must try to live.",
+        content_id: "Angin berhembus kencang! Kita harus mencoba untuk hidup.",
+        credit: "Jirō Horikoshi, The Wind Rises",
+    },
+    {
+        code: "MIX217",
+        content: "You can’t sit around envying other people’s worlds. You have to go out and change your own.",
+        content_id: "Jangan hanya iri pada dunia orang lain. Ubahlah duniamu sendiri.",
+        credit: "Chiaki Shinichi, Nodame Cantabile",
+    },
+    {
+        code: "MIX218",
+        content: "The only one who can decide your worth is you.",
+        content_id: "Hanya dirimu yang bisa menentukan nilai dirimu.",
+        credit: "Sakura Kinomoto, Cardcaptor Sakura",
+    },
+    {
+        code: "MIX219",
+        content: "Miracles happen to those who never give up.",
+        content_id: "Keajaiban terjadi pada mereka yang tak pernah menyerah.",
+        credit: "Tsubasa Ozora, Captain Tsubasa",
+    },
+    {
+        code: "MIX220",
+        content: "I am a genius of hard work.",
+        content_id: "Aku adalah jenius karena kerja keras.",
+        credit: "Rock Lee, Naruto",
+    },
+    {
+        code: "MIX221",
+        content: "The ball is alive.",
+        content_id: "Bola itu hidup.",
+        credit: "Shoyo Hinata, Haikyuu!!",
+    },
+    {
+        code: "MIX222",
+        content: "Even if we’re not tall, we can fly.",
+        content_id: "Meski kami tidak tinggi, kami bisa terbang.",
+        credit: "Tobio Kageyama, Haikyuu!!",
+    },
+    {
+        code: "MIX223",
+        content: "The moment you think you’re weak, you become weaker.",
+        content_id: "Saat kau mengira dirimu lemah, kau jadi lebih lemah.",
+        credit: "Aomine Daiki, Kuroko's Basketball",
+    },
+    {
+        code: "MIX224",
+        content: "We fight not to win, but to keep moving forward.",
+        content_id: "Kita bertarung bukan untuk menang, tapi untuk terus maju.",
+        credit: "Mikazuki Augus, Mobile Suit Gundam: Iron-Blooded Orphans",
+    },
+    {
+        code: "MIX225",
+        content: "I can’t stand a world where you can’t shout your feelings.",
+        content_id: "Aku tak tahan dunia di mana kau tak bisa meneriakkan perasaanmu.",
+        credit: "Nana Osaki, NANA",
+    },
+    {
+        code: "MIX226",
+        content: "Kindness can be a stronger weapon than any blade.",
+        content_id: "Kebaikan bisa jadi senjata yang lebih kuat dari pedang manapun.",
+        credit: "Kenshin Himura, Rurouni Kenshin",
+    },
+    {
+        code: "MIX227",
+        content: "In this world, the weak don’t get to choose how they die.",
+        content_id: "Di dunia ini, yang lemah tak bisa memilih cara mereka mati.",
+        credit: "Guts, Berserk",
+    },
+    {
+        code: "MIX228",
+        content: "Even if we can’t be fulfilled, we move forward.",
+        content_id: "Meski tak bisa terpenuhi, kita tetap melangkah maju.",
+        credit: "Casca, Berserk",
+    },
+    {
+        code: "MIX229",
+        content: "Bang.",
+        content_id: "Dor.",
+        credit: "Vash the Stampede, Trigun",
+    },
+    {
+        code: "MIX230",
+        content: "Whatever happens, happens.",
+        content_id: "Apa pun yang terjadi, terjadilah.",
+        credit: "Spike Spiegel, Cowboy Bebop",
+    },
+    {
+        code: "MIX231",
+        content: "Believe in the me that believes in the students.",
+        content_id: "Percayalah pada diriku yang percaya pada murid-muridku.",
+        credit: "Koro-sensei, Assassination Classroom",
+    },
+    {
+        code: "MIX232",
+        content: "Music isn’t a tool to win. It’s a way to say ‘I’m here.’",
+        content_id: "Musik bukan alat untuk menang. Musik adalah cara berkata ‘aku ada di sini’.",
+        credit: "Kaori Miyazono, Your Lie in April",
+    },
+    {
+        code: "MIX233",
+        content: "If you don’t face someone, you can’t understand them.",
+        content_id: "Jika kau tak berhadapan dengan seseorang, kau takkan memahaminya.",
+        credit: "Shoya Ishida, A Silent Voice",
+    },
+    {
+        code: "MIX234",
+        content: "You can’t rewind life. But you can play the next track.",
+        content_id: "Hidup tak bisa di-rewind. Tapi kau bisa memutar lagu berikutnya.",
+        credit: "Rintarō Okabe, Steins;Gate",
+    },
+    {
+        code: "MIX235",
+        content: "A detective who corners himself can’t corner the culprit.",
+        content_id: "Detektif yang menyudutkan dirinya takkan bisa menyudutkan pelaku.",
+        credit: "Shinichi Kudo, Detective Conan",
+    },
+    {
+        code: "MIX236",
+        content: "If you have time to worry, run.",
+        content_id: "Jika kau punya waktu untuk khawatir, berlarilah.",
+        credit: "Sora, No Game No Life",
+    },
+    {
+        code: "MIX237",
+        content: "There’s no such thing as a painless lesson—that’s just a delusion.",
+        content_id: "Tak ada pelajaran tanpa rasa sakit—itu hanya delusi.",
+        credit: "Riza Hawkeye, Fullmetal Alchemist: Brotherhood",
+    },
+    {
+        code: "MIX238",
+        content: "Protecting a person means giving them a place to belong.",
+        content_id: "Melindungi seseorang berarti memberinya tempat untuk pulang.",
+        credit: "Todoroki Shoto, My Hero Academia",
+    },
+    {
+        code: "MIX239",
+        content: "A hero is someone who keeps getting back up.",
+        content_id: "Pahlawan adalah orang yang terus bangkit lagi dan lagi.",
+        credit: "All Might, My Hero Academia",
+    },
+    {
+        code: "MIX240",
+        content: "Hope is like a path: it appears when you walk on it.",
+        content_id: "Harapan seperti jalan: ia muncul saat kau melangkah di atasnya.",
+        credit: "Natsume Takashi, Natsume’s Book of Friends",
+    },
+    {
+        code: "MIX241",
+        content: "Humans can change. That’s their strength.",
+        content_id: "Manusia bisa berubah. Itulah kekuatan mereka.",
+        credit: "Edogawa Ranpo, Bungou Stray Dogs",
+    },
+    {
+        code: "MIX242",
+        content: "Even if you’re scared, move one step forward.",
+        content_id: "Meski kau takut, majulah satu langkah.",
+        credit: "Shinjiro Aragaki, Persona 3 (Anime)",
+    },
+    {
+        code: "MIX243",
+        content: "Justice without power is meaningless; power without justice is violence.",
+        content_id: "Keadilan tanpa kekuatan tak berarti; kekuatan tanpa keadilan adalah kekerasan.",
+        credit: "Lelouch Lamperouge, Code Geass",
+    },
+    {
+        code: "MIX244",
+        content: "A kingdom of isolation is just a prison with velvet walls.",
+        content_id: "Kerajaan isolasi hanyalah penjara dengan dinding beludru.",
+        credit: "San, Princess Mononoke",
+    },
+    {
+        code: "MIX245",
+        content: "The sky doesn’t need a reason to be blue, and neither do you to be yourself.",
+        content_id: "Langit tak butuh alasan untuk biru, begitu pula kau untuk menjadi dirimu sendiri.",
+        credit: "Howl, Howl’s Moving Castle",
+    },
+    {
+        code: "MIX246",
+        content: "When you can’t see the light, become it.",
+        content_id: "Saat kau tak bisa melihat cahaya, jadilah cahaya itu.",
+        credit: "Shigeo “Mob” Kageyama, Mob Psycho 100",
+    },
+    {
+        code: "MIX247",
+        content: "A warrior’s weapon is his heart before his blade.",
+        content_id: "Senjata seorang ksatria adalah hatinya sebelum pedangnya.",
+        credit: "Saber, Fate/stay night",
+    },
+    {
+        code: "MIX248",
+        content: "If you want to grant wishes, you must have the power to do so.",
+        content_id: "Jika kau ingin mengabulkan harapan, kau harus punya kekuatan untuk melakukannya.",
+        credit: "Homura Akemi, Puella Magi Madoka Magica",
+    },
+    {
+        code: "MIX249",
+        content: "Adults are just children who forgot how to be honest.",
+        content_id: "Orang dewasa hanyalah anak-anak yang lupa bagaimana jujur.",
+        credit: "Aqua Hoshino, Oshi no Ko",
+    },
+    {
+        code: "MIX250",
+        content: "The journey matters, even if you forget the destination.",
+        content_id: "Perjalanan itu penting, meski kau lupa tujuan akhirnya.",
+        credit: "Frieren, Frieren: Beyond Journey’s End",
+    },
 
+
+];
 
 export default animeMangaQuotes;

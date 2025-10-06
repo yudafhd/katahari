@@ -9,7 +9,7 @@
     "serve": "npm run start",
     "dev": "npm run start",
     "build": "node ./scripts/build-quotes-json.mjs",
-    "pack": "zip -r katahari.zip ."
+    "pack": "zip -r katahari.zip . -x \"node_modules/*\" \"scripts/*\" \".git/*\" \"package.json\" \"package-lock.json\" \"README.md\" \"readme.md\" \".gitignore\" \".DS_Store\""
   },
   "author": "",
   "license": "MIT",
