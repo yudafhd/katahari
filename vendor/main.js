@@ -52,6 +52,8 @@ window.addEventListener("DOMContentLoaded", async () => {
       // set theme color into CSS custom property so components (typography, buttons) adapt
       try {
         document.documentElement.style.setProperty('--text', t.color || '');
+        // ensure quote text follows custom theme color
+        document.documentElement.style.setProperty('--text-quote', t.color || '');
       } catch (err) {
         // ignore
       }
@@ -193,6 +195,8 @@ window.addEventListener("DOMContentLoaded", async () => {
           document.body.style.removeProperty('--bg');
           // remove theme color variable so CSS [data-theme] colors take effect
           document.documentElement.style.removeProperty('--text');
+          // remove custom quote text color so it reverts to scheme tokens
+          document.documentElement.style.removeProperty('--text-quote');
 
           // clear header/nav inline styles so data-theme rules take effect
           const headerEl = document.querySelector('.header, .header-inner');
@@ -250,6 +254,8 @@ document.getElementById("button-themes")?.addEventListener("click", async () => 
       // also set theme color into CSS custom property so components (typography, buttons) adapt
       try {
         document.documentElement.style.setProperty('--text', t.color || '');
+        // ensure quote text follows custom theme color
+        document.documentElement.style.setProperty('--text-quote', t.color || '');
         // optional: set a theme-specific accent variable if provided
         if (t.accent) document.documentElement.style.setProperty('--accent', t.accent);
       } catch (err) {
@@ -295,6 +301,7 @@ document.getElementById("button-sources")?.addEventListener("click", async () =>
     { key: "game", label: "Game" },
     { key: "movie", label: "Movie" },
     { key: "spongebob", label: "Spongebob" },
+    { key: "drakor-film-artis", label: "Korean Drama and Artists" },
   ];
 
   // load current selection (default: all)
@@ -411,7 +418,7 @@ function showPanel(html) {
   const content = document.getElementById("content");
   if (!content) return;
   const prev = content.innerHTML;
-  content.innerHTML = `<div class="panel card" role="dialog" aria-modal="true">${html}
+  content.innerHTML = `<div class="panel" role="dialog" aria-modal="true">${html}
     <div style="display:flex;gap:8px;justify-content:center;margin-top:1rem">
     </div>
   </div>`;

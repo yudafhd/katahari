@@ -22,6 +22,7 @@ const files = [
     "database/quotes/game.js",
     "database/quotes/movie.js",
     "database/quotes/spongebob.js",
+    "database/quotes/drakor-film-artis.js",
 ];
 
 function extractFirstTopLevelArray(source) {

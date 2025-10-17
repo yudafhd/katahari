@@ -4,6 +4,7 @@ import bookQuotes from "./book.js";
 import gameQuotes from "./game.js";
 import movieQuotes from "./movie.js";
 import spongebobQuotes from "./spongebob.js";
+import koreanDramaQuotes from "./drakor-film-artis.js";
 
 const quotesList = () => [
   ...generalQuotes,
@@ -12,6 +13,7 @@ const quotesList = () => [
   ...gameQuotes,
   ...movieQuotes,
   ...spongebobQuotes,
+  ...koreanDramaQuotes,
 ];
 
 export default quotesList;
